@@ -3,6 +3,30 @@ body {
 	padding: 0;
 	background-color: #fff;
 }
+.convexe{
+
+    background-color: red;
+    clip-path: polygon(
+      inset 0 50%, 
+      inset 50% 0, 
+      inset calc(100% - 50%) 0, 
+      inset 100% 20%, 
+      inset 100% calc(100% - 20%), 
+      inset calc(100% - 20%) 100%, 
+      inset 20% 100%, 
+      inset 0 calc(100% - 20%),
+      outset 10% 30%, 
+      outset 30% 10%, 
+      outset calc(100% - 30%) 10%, 
+      outset calc(100% - 10%) 30%, 
+      outset calc(100% - 10%) calc(100% - 30%), 
+      outset calc(100% - 30%) calc(100% - 10%), 
+      outset 30% calc(100% - 10%), 
+      outset 10% calc(100% - 30%)
+    );
+
+  
+}
 header {
   background-color: #fffcfb;
 }
@@ -161,7 +185,121 @@ header {
 
 /* formulaire d'inscription */
 
+}
+.navbar {
+  min-height: 10vh;
+  background-color: rgb(112, 96, 96);
+}
+.navbar-brand {
+  transition: transform 1s ease-in-out;
+}
 
+.navbar-brand:hover {
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+
+.form-container {
+    
+    border-radius: 5%;
+    background-color: transparent;
+    /* opacity: 0; */
+    animation: drop-in 2s forwards;
+    min-height: 75vh;
+  }
+  
+
+   @keyframes drop-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  form {
+    position: sticky;
+    width: 50%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  form img{
+    position: sticky;
+    margin-left:  17%;
+    height: 100px;
+    width: 60%;
+    /* height: */
+    border-radius: 100%;
+    background-color: transparent;
+
+  }
+   
+   label {
+    display: block;
+    margin-bottom: 10px;
+    color: aqua;
+    
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: rgb(112, 96, 96);
+    color: rgb(255, 0, 8);
+  }
+  
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    
+  }
+.btn{
+  background-color: aqua;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  z-index: 9999;
+  display: none;
+}
+
+  footer {
+    min-height: 15vh;
+    
+  }
   
   
   
